@@ -1,0 +1,96 @@
+{
+  "id" : "64425f9d9d19a339997efc57",
+  "cts" : 1682071453673,
+  "createdUserName" : "sridhar sri",
+  "mts" : 1682071453673,
+  "apiId" : "64425b059d19a339997efc48",
+  "revisionId" : "64425f9d9d19a339997efc58",
+  "name" : "azure_spec",
+  "displayName" : "azure_spec",
+  "description" : "",
+  "apiRevision" : 1,
+  "apiVersion" : 1,
+  "protocols" : [ "https", "http" ],
+  "serviceUrl" : "https://stage-mock.apiwiz.io",
+  "path" : "/choose",
+  "subscriptionKeyParameterNames" : {
+    "header" : "Ocp-Apim-Subscription-Key",
+    "query" : "subscription-key"
+  },
+  "subscriptionRequired" : false,
+  "contact" : {
+    "email" : "apiteam@swagger.io"
+  },
+  "license" : {
+    "name" : "Apache 2.0",
+    "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+  },
+  "termsOfServiceUrl" : "http://swagger.io/terms/",
+  "tags" : [ ],
+  "products" : [ ],
+  "isCurrent" : true,
+  "isOnline" : true,
+  "apiOperations" : [ {
+    "name" : "usage",
+    "displayName" : "usage",
+    "method" : "get",
+    "urlTemplate" : "/wait",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  }, {
+    "name" : "test",
+    "displayName" : "test",
+    "method" : "post",
+    "urlTemplate" : "/path",
+    "templateParameters" : [ ],
+    "description" : "",
+    "policies" : [ ],
+    "tags" : [ ]
+  } ],
+  "policies" : [ {
+    "name" : "base",
+    "description" : "Inherit tag",
+    "scope" : [ "PRODUCT", "API", "OPERATION" ],
+    "supportedScope" : [ "PRODUCT", "API", "OPERATION" ],
+    "section" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+    "supportedSection" : [ "INBOUND", "OUTBOUND", "BACKEND", "ON_ERROR" ],
+    "useDefault" : false,
+    "policyElements" : [ {
+      "name" : "base",
+      "description" : "Inheritance tag",
+      "multiple" : false,
+      "addablePolicies" : false,
+      "policyElementAttributes" : [ ],
+      "policyElements" : [ ],
+      "selectedPolicyElements" : [ ],
+      "requiredPolicyElements" : [ ],
+      "requiredPolicyElementAttributes" : [ ]
+    } ]
+  } ],
+  "connector" : {
+    "id" : "643e2f120e5bbf2f42ee50e3",
+    "cts" : 1681796866034,
+    "createdUserName" : "sridhar sri",
+    "mts" : 1681796866034,
+    "connectorName" : "QA",
+    "managementHost" : "apiwiz-qa.management.azure-api.net",
+    "gatewayHost" : "apiwiz-qa.azure-api.net",
+    "subscriptionId" : "39ad6429-6b72-4379-8a08-7188f5036608",
+    "resourceGroup" : "apiwiz",
+    "serviceName" : "apiwiz-qa"
+  },
+  "enableScmUpload" : true,
+  "scmUpload" : {
+    "repoName" : "Bundledschema",
+    "branch" : "master",
+    "hostUrl" : "https://github.com/vidya-bs/Bundledschema.git",
+    "folderName" : "azure1",
+    "commitMessage" : "init",
+    "scmSource" : "git",
+    "username" : "vidya-bs",
+    "password" : "",
+    "authType" : "token"
+  }
+}
