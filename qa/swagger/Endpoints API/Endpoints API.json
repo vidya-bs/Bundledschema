@@ -56,7 +56,8 @@
           "required" : false,
           "style" : "simple",
           "in" : "header"
-        } ]
+        } ],
+        "deprecated" : true
       }
     },
     "/{id}/service" : {
@@ -196,6 +197,9 @@
             "type" : "string"
           },
           "example" : "application/json"
+        } ],
+        "security" : [ {
+          "ApiKey" : [ ]
         } ]
       },
       "post" : {
@@ -351,6 +355,10 @@
             "type" : "string"
           },
           "example" : "application/json"
+        } ],
+        "deprecated" : true,
+        "security" : [ {
+          "Oauth2" : [ "offline_access" ]
         } ]
       },
       "put" : {
@@ -490,9 +498,6 @@
             "description" : "",
             "type" : "string"
           }
-        } ],
-        "security" : [ {
-          "oauth2" : [ "offline_access" ]
         } ]
       }
     }
@@ -503,16 +508,10 @@
     "x-hostName" : "mock.apiwiz.io",
     "url" : "https://mock.apiwiz.io/V1/endpoints",
     "x-basePath" : "/V1/endpoints"
-  }, {
-    "x-name" : "apigee",
-    "x-schema" : "https://",
-    "x-hostName" : "chenosis-nonprod-dev.apigee.net",
-    "url" : "https://chenosis-nonprod-dev.apigee.net/V1/endpoints",
-    "x-basePath" : "/V1/endpoints"
   } ],
   "tags" : [ ],
   "security" : [ {
-    "oauth2" : [ "offline_access" ]
+    "Oauth2" : [ "offline_access" ]
   } ],
   "components" : {
     "schemas" : {
@@ -687,20 +686,34 @@
             "type" : "object"
           }
         }
+      },
+      "testModel" : {
+        "description" : "",
+        "type" : "string"
+      },
+      "testing" : {
+        "description" : "",
+        "type" : "string"
       }
     },
     "securitySchemes" : {
-      "oauth2" : {
+      "Oauth2" : {
         "type" : "oauth2",
         "description" : "",
         "flows" : {
           "clientCredentials" : {
             "tokenUrl" : "https://chenosis-nonprod-test.apigee.net/oauth/v2/v1/access_token",
             "scopes" : {
-              "offline_access" : "Get offline Access"
+              "offline_access" : "Get Offline Access"
             }
           }
         }
+      },
+      "ApiKey" : {
+        "type" : "apiKey",
+        "description" : "",
+        "in" : "header",
+        "name" : "x-api-key"
       }
     }
   },
