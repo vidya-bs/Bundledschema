@@ -5,7 +5,7 @@
         "version": "0.1.0"
     },
     "channels": {
-        "hellos": {
+        "helloss": {
             "publish": {
                 "message": {
                     "payload": {
